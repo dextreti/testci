@@ -27,5 +27,6 @@ jobs:
       - name: Deploy to GitHub Pages
         uses: JamesIves/github-pages-deploy-action@v4
         with:
+          token: ${{ secrets.GITHUB_TOKEN }}
           branch: gh-pages
-          folder: dist/test1  # Ensure this matches the "outputPath" in angular.json
+          folder: dist/test1
