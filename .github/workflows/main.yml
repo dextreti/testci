@@ -22,7 +22,7 @@ jobs:
         run: npm install
 
       - name: Run Tests
-        run: npm run test:ci # Ensure your package.json has a script for CI testing
+        run: npm run test:ci # Allow running in github workflow CI testing
 
       - name: Build Angular App
         run: npm run build -- --base-href="/testci/"
@@ -31,7 +31,7 @@ jobs:
         uses: JamesIves/github-pages-deploy-action@v4
         with:
           token: ${{ secrets.GITHUB_TOKEN }}
-          branch: master
+          branch: master # this branch name is create automatic in github it can be any branch name
           folder: dist/test1/browser
           clean: true
           force: true
