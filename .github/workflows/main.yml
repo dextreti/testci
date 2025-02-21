@@ -3,7 +3,7 @@ name: Deploy Angular App to GitHub Pages
 on:
   push:
     branches:
-      - main  # Change this if your default branch is different
+      - main # Change this if your default branch is different
 
 jobs:
   build-deploy:
@@ -28,7 +28,7 @@ jobs:
         uses: JamesIves/github-pages-deploy-action@v4
         with:
           token: ${{ secrets.GITHUB_TOKEN }}
-          branch: gh-pages          
+          branch: master
           folder: dist/test1/browser
           clean: true
           force: true
